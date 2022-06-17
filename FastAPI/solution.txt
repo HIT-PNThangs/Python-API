@@ -1,0 +1,26 @@
+0: mở project
+1: mở terminal
+2: python -m venv venv
+3: cd venv/Scripts
+4: activate.bat -> vào môi trường của venv
+5: pip install fastapi[all]
+
+
+6: app = FastAPI()
+để chạy : uvicorn main:app --reload
+    uvicorn main: app đề cập đến: 
+        main: tệp main.py ("mô-đun" Python). 
+        app: đối tượng được tạo bên trong main.py với dòng app = FastAPI (). 
+        --reload: làm cho máy chủ khởi động lại sau khi thay đổi mã. Chỉ sử dụng để phát triển.
+
+    main:app app chỉ tên đối tượng gọi FastAPI()
+
+
+@app.get("/") -> đường dẫn
+def get(): -> phương thức: tên phương thức không quan trọng
+    return {"message": "Hello world!"}
+
+-> quan trọng là đường dẫn
+
+### đừng dẫn động nên để trước đường dẫn tĩnh
+### /docs để đọc docs của API
